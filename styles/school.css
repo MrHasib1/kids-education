@@ -17,6 +17,9 @@
   border: none;
   color: #ffffff;
 }
+hr {
+  display: none;
+}
 /* nav style */
 nav {
   display: flex;
@@ -69,6 +72,10 @@ nav > .btn-primary {
   background-color: orange;
 }
 
+body {
+  background-color: #f7f7f7;
+}
+
 /* hero section */
 .hero {
   max-width: 1160px;
@@ -96,26 +103,70 @@ nav > .btn-primary {
 /* standard curriculam */
 .standard-curriculam {
   background-image: url(../assets/bg.png);
+  background-size: cover;
+  margin-top: 60px;
 }
 .curriculam {
-  display: grid;
-  grid-template-columns: center;
-  grid-template-rows: center;
+  max-width: 1160px;
+  margin: 0 auto;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 1160px;
-  height: 481px;
-  margin: 0px 140px;
+}
+.standard-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  margin-top: 80px;
+  gap: 28px;
+}
+.card-description {
+  color: #808080;
+  font-size: 1rem;
+  font-weight: 500rem;
 }
 .card {
-  justify-content: center;
-  align-items: center;
+  width: 350px;
+  height: 380px;
+  text-align: center;
+  position: relative;
+  padding: 30px;
+  border: 0.94px solid rgb(222, 245, 255);
+  border-radius: 19px;
+  box-shadow: inset 0px 0px 28px 0.94px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(
+    rgba(222, 245, 255, 1) 30%,
+    rgb(255, 255, 255) 70%
+  );
+}
+.card2 {
+  background: linear-gradient(
+    rgba(255, 244, 220, 1) 30%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+.card3 {
+  background: linear-gradient(
+    rgba(238, 225, 255, 1) 30%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+.read-more1 {
+  color: #64c8ff;
+}
+.read-more2 {
+  color: #f0aa00;
+}
+.read-more3 {
+  color: #8700ff;
 }
 /* less than icon create */
 .icon {
   text-align: center;
   gap: 10px;
+  justify-content: center;
   align-items: center;
   margin-top: 80px;
   margin-bottom: 60px;
@@ -130,54 +181,132 @@ nav > .btn-primary {
   font-weight: 500;
   justify-content: center;
   align-items: center;
-}
-.standard-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-top: 60px;
-  margin-bottom: 80px;
-}
-.card-container {
-  gap: 28.29px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.card1 {
-  background: linear-gradient(#def5ff);
-  border-radius: 19px;
-  width: 368px;
-  height: 481px;
-  padding: 40px;
-  border: 2px solid blue;
-}
-.card2 {
-  background: linear-gradient(rgba(222, 245, 255, 1));
-  border: 2px solid blue;
-  border-radius: 19px;
-  width: 368px;
-  height: 481px;
-}
-.card3 {
-  background: linear-gradient(#fff4dc);
-  border: 2px solid blue;
-  border-radius: 19px;
-  width: 368px;
-  height: 481px;
+  cursor: pointer;
 }
 
 /* our stories */
-.our-stories {
-  background-image: linear-gradient(#ffffff, #fea301), url(../assets/bg.png);
+.stories-section {
+  background-image: url(../assets/bg.png),
+    linear-gradient(0deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
+  background-size: cover;
+  text-align: center;
 }
-.storie-more-container {
+
+.storie-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.our-stories-div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+.our-stories-container {
+  display: flex;
+  gap: 30px;
+}
+.image-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 650px;
+  overflow: hidden;
+  position: relative;
+}
+.image-container img {
+  width: 100%;
+}
+
+.box-content {
+  padding: 30px;
+  position: relative;
+}
+
+.our-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.our-description {
+  color: #666666;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.date-button1 {
+  background-color: #3cd8e8;
+  position: absolute;
+  top: 390px;
+  left: 5%;
+  color: #ffffff;
+  font-size: 0.93rem;
+  font-weight: 500;
+  background-color: #3cd8e8;
+  border-radius: 50px;
+  border: none;
+  width: 186px;
+  height: 40px;
+}
+
+.date-button {
+  position: absolute;
+  top: 175px;
+  left: 5%;
+  color: #ffffff;
+  font-size: 0.89rem;
+  font-weight: 500;
+  background-color: #95b226;
+  border-radius: 40px;
+  border: none;
+  width: 174px;
+  height: 30px;
+}
+
+.two {
+  background-color: #5d58f0;
+}
+
+.our-stories-title {
+  color: #000000;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.our-stories-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.our-stories-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 310px;
+  position: relative;
+}
+.our-stories-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.our-stories-image-container img {
+  width: 100%;
+  height: auto;
+}
+.our-stories-content {
+  padding: 10px;
+  position: relative;
 }
 
 /* footer */
 .footer-bg {
-  background-color: rgba(168, 109, 38, 0.667);
+  background-color: #01acfd;
 }
 .footer-section {
   display: grid;
@@ -232,6 +361,9 @@ nav > .btn-primary {
   font-size: 1.5rem;
   font-weight: 700;
 }
+.marquee {
+  background-color: yellow;
+}
 @media screen and (max-width: 576px) {
   .hamburger {
     display: block;
@@ -246,12 +378,11 @@ nav > .btn-primary {
     align-items: center;
     justify-content: space-between;
     margin: 12px 16px;
-    border-radius: 1px solid orange;
+  }
+  hr {
+    display: block;
   }
 
-  .curriculam {
-    flex-direction: column;
-  }
   /* hero section */
   .hero {
     flex-direction: column;
@@ -267,6 +398,59 @@ nav > .btn-primary {
   }
   .hero-title {
     font-size: 2rem;
+  }
+
+  /* standard curriculam */
+  .icon {
+    display: none;
+  }
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  .storie-title,
+  .standard-title {
+    font-size: 1.6rem;
+  }
+  .card {
+    align-items: center;
+
+    height: 320px;
+    width: 340px;
+  }
+
+  /* our stories */
+
+  .image-container {
+    display: none;
+  }
+
+  .date-button {
+    position: absolute;
+    top: 120px;
+    left: 25%;
+    color: #ffffff;
+    font-size: 0.69rem;
+    font-weight: 500;
+    border-radius: 40px;
+    border: none;
+    width: 130px;
+    height: 20px;
+  }
+  .our-stories-title {
+    color: #000000;
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .our-stories-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .our-stories-card {
+    width: 210px;
   }
 
   /* footer */
